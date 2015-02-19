@@ -1,0 +1,6 @@
+*.bak
+*.exe
+*.log
+*.zip
+/windows.php.net
+
