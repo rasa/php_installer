@@ -1,6 +1,6 @@
 # php_installer
 
-php_installer downloads and installs PHP 5, the PECL extensions,
+php_installer downloads and installs PHP 5, selected PECL extensions,
 the PHP Manual (English) in Windows Help (CHM) Format
 which are available at http://www.php.net, and http://zend.com.
 
@@ -39,13 +39,14 @@ Options:
 /D=path    Install into the directory 'path' (default is
            %ProgramFiles%\PHP)
 /INSTYPE n Where n is a number between 0 and 7:
-           1: PHP VC6 for Apache, PECL, and Manual (Default)
-           2: PHP VC9 for IIS, PECL, and Manual
-           3: PHP VC6 for Apache (Only)
-           4: PHP VC6 for IIS (Only)
-           5: PECL Extensions (Only)
-           6: PHP Manual Only (CHM English)
-           7: Zend Optimizer (Only)
+           1: PHP for Apache, PECL Extensions, and Manual (Thread Safe) (Default)
+           2: PHP for Apache (Only)
+           3: PHP for IIS, PECL Extensions, and Manual (Non-Thread Safe)
+           4: PHP for IIS (Only)
+           5: PECL Extensions for Apache (Only)
+           6: PECL Extensions for IIS (Only)
+           7: PHP Manual Only (CHM English)
+           8: None
 
 The following options are planned to be implemented in a future version:
 
