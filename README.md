@@ -1,7 +1,7 @@
 # php_installer
 
-php_installer lets you download and install PHP 5, the PECL extensions,
-the PHP Manual (English) in Windows Help (CHM) Format, and the Zend Optimizer,
+php_installer downloads and installs PHP 5, the PECL extensions,
+the PHP Manual (English) in Windows Help (CHM) Format
 which are available at http://www.php.net, and http://zend.com.
 
 php_installer also performs the following:
