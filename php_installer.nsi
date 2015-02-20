@@ -51,7 +51,6 @@ InstType "None"
 Section "-hidden1"
 	CreateDirectory "$INSTDIR\chm"
 	File "fixini.php"
-	File "setup.iss"
 SectionEnd
 
 !include "php_installer.nsh"
@@ -78,21 +77,21 @@ Section "-hidden2"
 	phpini_exists:
 
 
-	IfSilent 0 not_silent
-		IfFileExists "$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe" 0 zend_done
-			DetailPrint 'Executing "net stop apache2"...'
-			ExecWait 'cmd.exe /c start "Stopping Apache..." /min net stop apache2' $0
-			DetailPrint '"net stop apache2" returned $0'
-			DetailPrint 'Executing "$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe"...'
-			ExecWait '"$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe" /s /f1"$INSTDIR\setup.iss"' $0
-			DetailPrint '"$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe" returned $0'
-			Goto zend_done
-	not_silent:
-		IfFileExists "$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe" 0 zend_done
-			DetailPrint 'Executing "$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe"...'
-			ExecWait '"$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe"' $0
-			DetailPrint '"$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe" returned $0'
-	zend_done:
+	#IfSilent 0 not_silent
+	#	IfFileExists "$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe" 0 zend_done
+	#		DetailPrint 'Executing "net stop apache2"...'
+	#		ExecWait 'cmd.exe /c start "Stopping Apache..." /min net stop apache2' $0
+	#		DetailPrint '"net stop apache2" returned $0'
+	#		DetailPrint 'Executing "$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe"...'
+	#		ExecWait '"$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe" /s /f1"$INSTDIR\setup.iss"' $0
+	#		DetailPrint '"$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe" returned $0'
+	#		Goto zend_done
+	#not_silent:
+	#	IfFileExists "$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe" 0 zend_done
+	#		DetailPrint 'Executing "$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe"...'
+	#		ExecWait '"$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe"' $0
+	#		DetailPrint '"$EXEDIR\ZendOptimizer-${ZEND_VER}-Windows-i386.exe" returned $0'
+	#zend_done:
 SectionEnd
 
 Section uninstall
