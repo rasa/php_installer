@@ -1,3 +1,7 @@
+## 5.6.7.1 (12-Apr-2015)
+
+  * Update Inetc NSIS plugin to 1.0.4.4
+
 ## 5.6.7 (27-Mar-2015)
 
   * Update PHP to 5.6.7
