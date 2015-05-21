@@ -1,6 +1,6 @@
 # Copyright (c) 2005-2015 Ross Smith II (http://smithii.com). MIT Licensed.
 
-!define PHP_VER 5.6.6
+!define PHP_VER 5.6.9
 !define PECL_VER 5.2.6
 #!define ZEND_VER 3.3.3
 
